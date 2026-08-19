@@ -1,10 +1,10 @@
-# Vendas_TCC - Módulo de Vendas ERP (Etec Guarulhos)
+#Vendas_TCC - Módulo de Vendas ERP (Etec Guarulhos)
 
-Repositório oficial do Trabalho de Conclusão de Curso (TCC) da Etec Guarulhos. Este projeto implementa exclusivamente o **Módulo de Vendas (Order-to-Cash)**. Módulos externos de integração e banco de dados genérico estão delimitados apenas para suporte às telas e regras de negócio do grupo.
+Repositório oficial do TCC da Etec Guarulhos. Este projeto implementa o Módulo de Vendas.
 
-## Integrantes e Matriz de Responsabilidades por Camada
+Integrantes e Matriz de Responsabilidades por Camada
 
-Abaixo está a divisão exata do que cada integrante deve desenvolver em cada camada do sistema (SQL, DAO, Model, Controller e View):
+Divisão do que cada integrante deve fazer:
 
 | Integrante | Módulo / Tela | O que fazer em SQL & DAO | O que fazer em Model | O que fazer em Controller | O que fazer em View |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -15,13 +15,3 @@ Abaixo está a divisão exata do que cada integrante deve desenvolver em cada ca
 | **Pietro** | Gestão de Devoluções | Criar tabela `devolucoes`; implementar `DevolucaoDAO.java`. | Estruturar `Devolucao.java` (motivos e estornos). | `DevolucaoController.java` para processamento de notas de crédito. | Desenvolver `GestaoDevolucoesView.java` (pós-venda e estornos). |
 | **Eduardo** | Tela de Balcão (TOTVS) | Reutilizar persistência de pedidos e itens (`PedidoDAO.java`). | Utilizar `PedidoVenda.java` para vendas rápidas. | Controlar fluxo de PDV, atalhos e fechamento de caixa. | Desenvolver `TelaBalcaoView.java` (interface inspirada na TOTVS). |
 
----
-
-## Estrutura de Diretórios (Eclipse / Java)
-- `src/model/`: Entidades de domínio.
-- `src/dao/`: Camada de acesso a dados (JDBC).
-- `src/controller/`: Regras de negócio e transações.
-- `src/view/`: Interfaces gráficas (as 6 telas do TCC).
-- `src/util/`: Conexão com o banco de dados.
-- `banco/`: Scripts SQL relacionais (`schema.sql`).
-- `bin/`: Binários compilados.
