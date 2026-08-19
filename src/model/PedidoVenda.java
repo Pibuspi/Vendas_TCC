@@ -3,13 +3,16 @@ package model;
 import java.util.List;
 
 /**
- * Classe Model: PedidoVenda
+ * Model: PedidoVenda.java
+ * Responsável: Rafael
  * -----------------------------------------------------------------------------
- * Descrição: Representa o cabeçalho do pedido de venda no ciclo Order-to-Cash.
- * Gerencia o relacionamento com o cliente, lista de itens, valor total, margem
- * de lucro calculada e status do pedido (Digitação, Aprovação, Faturamento).
+ * Descrição detalhada: Representa o cabeçalho do pedido no ciclo Order-to-Cash.
+ * Conecta o cliente aos itens adquiridos, calcula o valor total, armazena a margem
+ * de lucro calculada pelo motor de preços e gerencia o status do pedido.
  * 
- * Implementar por: Equipe de Desenvolvimento (Módulo de Vendas)
+ * O que fazer em Model (Rafael):
+ * - Criar estrutura de relacionamento com `Cliente` e lista de `ItemPedido`.
+ * - Implementar métodos para somar o valor total e atualizar o status comercial.
  */
 public class PedidoVenda {
     private int idPedido;
@@ -19,6 +22,4 @@ public class PedidoVenda {
     private String statusPedido;
     private double margemLucroPercentual;
     private String observacoes;
-
-    // Métodos para cálculo de total, verificação de margem e regras de negócio.
 }

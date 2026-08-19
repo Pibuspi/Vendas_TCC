@@ -3,15 +3,16 @@ package controller;
 import model.Devolucao;
 
 /**
- * Classe Controller: DevolucaoController
+ * Controller: DevolucaoController.java
+ * Responsável: Pietro
  * -----------------------------------------------------------------------------
- * Descrição: Controla as regras de negócio para devoluções de mercadorias,
- * validação de prazos, estorno de valores e atualização de saldo em estoque.
+ * Descrição detalhada: Controla as regras de negócio para devoluções de mercadorias
+ * e críticas de vendas, processando estornos e gerando notas de crédito.
  * 
- * Implementar por: Equipe de Pós-Venda
+ * O que fazer em Controller (Pietro):
+ * - Validar prazos e condições para devolução.
+ * - Acionar `DevolucaoDAO` para persistir o estorno e atualizar o estoque.
  */
 public class DevolucaoController {
-    public void registrarDevolucao(Devolucao devolucao) {
-        // Lógica de registro e estorno.
-    }
+    public void registrarDevolucao(Devolucao devolucao) {}
 }

@@ -1,12 +1,15 @@
 package model;
 
 /**
- * Classe Model: ItemPedido
+ * Model: ItemPedido.java
+ * Responsável: Rafael
  * -----------------------------------------------------------------------------
- * Descrição: Representa cada linha de produto inserida na digitação do pedido.
- * Armazena a quantidade, o preço praticado, o desconto aplicado e o subtotal.
+ * Descrição detalhada: Representa cada linha de produto adicionada durante a digitação
+ * do pedido. Armazena a quantidade, preço praticado, desconto e subtotal.
  * 
- * Implementar por: Equipe de Desenvolvimento (Sales Order Entry)
+ * O que fazer em Model (Rafael):
+ * - Vincular a entidade `Produto`.
+ * - Criar lógica de cálculo de subtotal baseada na quantidade e desconto aplicado.
  */
 public class ItemPedido {
     private int idItem;
@@ -15,6 +18,4 @@ public class ItemPedido {
     private double precoPraticado;
     private double descontoAplicado;
     private double subtotal;
-
-    // Métodos de cálculo de subtotal e aplicação de descontos por alçada.
 }

@@ -1,13 +1,17 @@
 package model;
 
 /**
- * Classe Model: Cliente
+ * Model: Cliente.java
+ * Responsável: Eúde
  * -----------------------------------------------------------------------------
- * Descrição: Representa a entidade Cliente no sistema ERP. Contém os atributos
- * essenciais para cadastro, validação de CNPJ/CPF, controle de limite de crédito
- * e status financeiro (Hard Stop para inadimplência).
+ * Descrição detalhada: Representa a entidade de negócio Cliente no sistema ERP.
+ * Contém os atributos fundamentais para a identificação, validação de CNPJ/CPF,
+ * controle de limite de crédito e aplicação de Hard Stop em caso de inadimplência.
  * 
- * Implementar por: Equipe de Desenvolvimento (Módulo de Cadastro)
+ * O que fazer em Model (Eúde):
+ * - Criar atributos privados (idCliente, razaoSocial, cnpjCpf, limiteCredito, statusCredito).
+ * - Implementar construtores, Getters e Setters.
+ * - Adicionar métodos de validação de formatação de documentos.
  */
 public class Cliente {
     private int idCliente;
@@ -19,6 +23,4 @@ public class Cliente {
     private String estado;
     private double limiteCredito;
     private String statusCredito; // "LIBERADO" ou "BLOQUEADO"
-
-    // Construtores, Getters e Setters devem ser implementados aqui.
 }

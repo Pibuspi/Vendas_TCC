@@ -3,22 +3,18 @@ package controller;
 import model.PedidoVenda;
 
 /**
- * Classe Controller: PricingEngineController
+ * Controller: PricingEngineController.java
+ * Responsável: Matheus
  * -----------------------------------------------------------------------------
- * Descrição: Implementa o motor de preços (*Pricing Engine*). Valida em tempo
- * real se a margem de lucro do pedido está acima do mínimo permitido. Caso
- * contrário, aciona as alçadas comerciais ou aplica *Hard Stop*.
+ * Descrição detalhada: Implementa o motor de preços (Pricing Engine). Valida se a
+ * margem de lucro do pedido está acima do mínimo exigido, acionando alçadas
+ * comerciais ou Hard Stops caso contrário.
  * 
- * Implementar por: Equipe de Lógica Comercial e Regras de Negócio
+ * O que fazer em Controller (Matheus):
+ * - Algoritmo de cálculo de margem (Custo vs Preço Praticado).
+ * - Lógica de bloqueio automático por alçada comercial.
  */
 public class PricingEngineController {
-
-    public boolean validarMargemLucro(PedidoVenda pedido) {
-        // Lógica de cálculo de custo vs preço praticado.
-        return true;
-    }
-
-    public void aplicarAlcadaComercial(PedidoVenda pedido) {
-        // Encaminha para aprovação de gerência caso o desconto seja excessivo.
-    }
+    public boolean validarMargemLucro(PedidoVenda pedido) { return true; }
+    public void aplicarAlcadaComercial(PedidoVenda pedido) {}
 }

@@ -3,21 +3,17 @@ package controller;
 import model.PedidoVenda;
 
 /**
- * Classe Controller: PedidoController
+ * Controller: PedidoController.java
+ * Responsável: Rafael
  * -----------------------------------------------------------------------------
- * Descrição: Controla o fluxo de digitação de pedidos (*Sales Order Entry*),
- * validação de estoque em tempo real, integração fiscal e consolidação para
- * faturamento.
+ * Descrição detalhada: Controla o fluxo de digitação de pedidos (Sales Order Entry),
+ * validando a disponibilidade de estoque em tempo real e integrando com o DAO para persistência.
  * 
- * Implementar por: Equipe de Controle de Vendas e Faturamento
+ * O que fazer em Controller (Rafael):
+ * - Implementar lógica de adição de itens ao pedido.
+ * - Conectar com `PedidoDAO` para salvar no banco.
  */
 public class PedidoController {
-
-    public void criarPedido(PedidoVenda pedido) {
-        // Lógica de inserção e validação inicial.
-    }
-
-    public void consolidarParaFaturamento(int idPedido) {
-        // Envio para o módulo fiscal e financeiro.
-    }
+    public void criarPedido(PedidoVenda pedido) {}
+    public void consolidarParaFaturamento(int idPedido) {}
 }

@@ -1,13 +1,16 @@
 package model;
 
 /**
- * Classe Model: Produto
+ * Model: Produto.java
+ * Responsável: Rafael
  * -----------------------------------------------------------------------------
- * Descrição: Representa o SKU (Stock Keeping Unit) e itens de catálogo no ERP.
- * Armazena preço de tabela, custo unitário (crucial para o Pricing Engine evitar
- * margens negativas) e saldo de estoque em tempo real.
+ * Descrição detalhada: Representa o SKU e o catálogo de produtos no módulo de vendas.
+ * Armazena o preço de tabela, custo unitário (essencial para o Pricing Engine calcular
+ * a margem e evitar prejuízos) e o estoque atual em tempo real.
  * 
- * Implementar por: Equipe de Desenvolvimento (Catálogo e Estoque)
+ * O que fazer em Model (Rafael):
+ * - Definir atributos de SKU, descrição, preço de tabela, custo e saldo de estoque.
+ * - Implementar construtores e encapsulamento (Getters/Setters).
  */
 public class Produto {
     private int idProduto;
@@ -17,6 +20,4 @@ public class Produto {
     private double custoUnitario;
     private int estoqueAtual;
     private String ncm;
-
-    // Construtores, Getters e Setters devem ser implementados aqui.
 }

@@ -1,12 +1,16 @@
 package model;
 
 /**
- * Classe Model: Devolucao
+ * Model: Devolucao.java
+ * Responsável: Pietro
  * -----------------------------------------------------------------------------
- * Descrição: Representa o registro de devolução de vendas e críticas comerciais,
- * vinculada ao pedido original e ao cálculo de estorno financeiro.
+ * Descrição detalhada: Representa o registro de devolução e críticas de vendas
+ * (Return Orders), vinculando o pedido original, o motivo da devolução, o valor
+ * estornado e o status do processo.
  * 
- * Implementar por: Equipe de Pós-Venda e Devoluções
+ * O que fazer em Model (Pietro):
+ * - Estruturar atributos de ID, pedido, motivo, status e valor do estorno.
+ * - Implementar Getters e Setters.
  */
 public class Devolucao {
     private int idDevolucao;
@@ -14,6 +18,4 @@ public class Devolucao {
     private String motivoDevolucao;
     private String statusDevolucao;
     private double valorEstornado;
-
-    // Construtores, Getters e Setters.
 }
