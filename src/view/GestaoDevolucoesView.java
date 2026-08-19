@@ -1,13 +1,14 @@
 package view;
 
 /**
- * Tela 5: Gestão de Devoluções e Críticas de Vendas (Return Orders)
+ * View: GestaoDevolucoesView
+ * Responsável: Pietro
  * -----------------------------------------------------------------------------
- * Descrição: Interface para registro de devoluções de mercadorias, análise de
- * críticas de vendas, emissão de notas de crédito e reentrada de estoque.
- * 
- * Módulo: Pós-Venda e Devoluções
+ * Tela 5: Gestão de Devoluções e Críticas de Vendas (Return Orders).
+ * - O que fazer em Model: Estruturar `Devolucao.java` com motivos, valores estornados e status.
+ * - O que fazer em Controller: `DevolucaoController.java` para processar devoluções e estornos.
+ * - O que fazer em View: Interface para registro de devoluções, análise de críticas e notas de crédito.
  */
 public class GestaoDevolucoesView {
-    // Implementar formulário de devolução e motivos de crítica comercial.
+    // Implementação da tela de gestão de devoluções.
 }

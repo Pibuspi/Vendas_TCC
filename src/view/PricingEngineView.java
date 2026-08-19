@@ -1,14 +1,14 @@
 package view;
 
 /**
- * Tela 3: Motor de Preços e Alçadas Comerciais (Pricing Engine)
+ * View: PricingEngineView
+ * Responsável: Matheus
  * -----------------------------------------------------------------------------
- * Descrição: Tela dedicada ao gerenciamento de regras de precificação dinâmica,
- * descontos máximos e visualização de margens de lucro. Exibe alertas de Hard Stop
- * e gerencia o fluxo de alçadas comerciais.
- * 
- * Módulo: Precificação e Governança Comercial
+ * Tela 3: Motor de Preços & Alçadas Comerciais (Pricing Engine).
+ * - O que fazer em Model: Estruturar regras de margem mínima e parâmetros de desconto.
+ * - O que fazer em Controller: `PricingEngineController.java` para cálculo automático de margem de lucro e aplicação de Hard Stops.
+ * - O que fazer em View: Exibição de alertas de margem, avisos de Hard Stop e painel de alçadas.
  */
 public class PricingEngineView {
-    // Implementar regras de exibição de margem e alertas de aprovação.
+    // Implementação do painel do Pricing Engine.
 }

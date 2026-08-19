@@ -1,14 +1,14 @@
 package view;
 
 /**
- * Classe View: TelaBalcaoView
+ * View: TelaBalcaoView
+ * Responsável: Eduardo
  * -----------------------------------------------------------------------------
- * Descrição: Interface otimizada para vendas rápidas de balcão (inspirada no
- * modelo TOTVS), permitindo lançamento ágil de itens, leitura de código de barras
- * e fechamento de caixa integrado.
- * 
- * Implementar por: Equipe de Vendas de Balcão e Checkout
+ * Tela 6: Tela de Balcão (Modelo TOTVS).
+ * - O que fazer em Model: Reutilizar classes de `PedidoVenda` e `ItemPedido` para lançamento rápido.
+ * - O que fazer em Controller: Controlar fluxo de PDV/Balcão, atalhos de teclado e fechamento de caixa integrado.
+ * - O que fazer em View: Interface de alta velocidade inspirada no modelo TOTVS para atendimento de balcão.
  */
 public class TelaBalcaoView {
-    // Componentes de interface e eventos de teclado/mouse para balcão.
+    // Implementação da tela de balcão.
 }

@@ -1,14 +1,14 @@
 package view;
 
 /**
- * Tela 2: Digitação de Pedidos de Venda (Sales Order Entry)
+ * View: DigitacaoPedidoView
+ * Responsável: Rafael
  * -----------------------------------------------------------------------------
- * Descrição: Interface principal para lançamento de pedidos. Permite busca de
- * SKUs, verificação de estoque em tempo real, inserção de itens, cálculo de
- * subtotais e verificação fiscal preliminar.
- * 
- * Módulo: Ciclo Order-to-Cash
+ * Tela 2: Digitação de Pedidos de Venda (Sales Order Entry).
+ * - O que fazer em Model: Estruturar `PedidoVenda.java` e `ItemPedido.java` para conter listas de produtos e cálculos de subtotais.
+ * - O que fazer em Controller: `PedidoController.java` para validar estoque em tempo real e calcular valores totais.
+ * - O que fazer em View: Interface de lançamento de itens, consulta rápida de SKUs e fechamento preliminar do pedido.
  */
 public class DigitacaoPedidoView {
-    // Implementar tabela de itens do pedido, campos de busca e totalizadores.
+    // Implementação da tela de digitação de pedidos.
 }
