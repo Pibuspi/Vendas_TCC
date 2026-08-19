@@ -1,4 +1,4 @@
-#Vendas_TCC - Módulo de Vendas ERP (Etec Guarulhos)
+Vendas_TCC - Módulo de Vendas ERP (Etec Guarulhos)
 
 Repositório oficial do TCC da Etec Guarulhos. Este projeto implementa o Módulo de Vendas.
 
