@@ -19,7 +19,6 @@ public class ItemPedido {
     private double descontoAplicado;
     private double subtotal;
 }
-package model; 
 
     // Construtor 
     public ItemPedido(int idItem, Produto produto, int quantidade, 
