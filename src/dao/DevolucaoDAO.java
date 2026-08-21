@@ -1,13 +1,14 @@
 package dao;
 
 /**
- * DAO: DevolucaoDAO
- * Responsável: Pietro
+ * DAO: DevolucaoDAO.java
+ * Responsável: Módulo de Banco de Dados / Externo ao grupo de Vendas
  * -----------------------------------------------------------------------------
- * Camada SQL/DAO para a Gestão de Devoluções e Críticas.
- * - O que fazer em SQL: Gerenciar a tabela `devolucoes` para controle de estornos, motivos e notas de crédito.
- * - O que fazer em DAO: Inserir registros de devolução e atualizar status de estorno financeiro e reentrada de estoque.
+ * Ponto de integração reservado para persistir as ocorrências de devolução. A
+ * Gestão de Devoluções de Pietro apenas prepara e valida os dados comerciais; a
+ * implementação JDBC, tabelas, transações e conexão com PostgreSQL pertencem ao
+ * módulo externo de Banco de Dados.
  */
 public class DevolucaoDAO {
-    // Persistência para devoluções.
+    // Implementação prevista exclusivamente para o módulo de Banco de Dados.
 }
