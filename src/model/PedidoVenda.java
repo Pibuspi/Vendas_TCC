@@ -15,6 +15,7 @@ import java.util.List;
  * - Implementar métodos para somar o valor total e atualizar o status comercial.
  */
 public class PedidoVenda {
+
     private int idPedido;
     private Cliente cliente;
     private List<ItemPedido> itens;
@@ -22,4 +23,83 @@ public class PedidoVenda {
     private String statusPedido;
     private double margemLucroPercentual;
     private String observacoes;
+    }
+
+    public PedidoVenda(int idPedido, Cliente cliente, List<ItemPedido> itens) {
+        this.idPedido = idPedido;
+        this.cliente = cliente;
+        this.itens = itens;
+        this.valorTotal = 0.0;
+        this.statusPedido = "ABERTO";
+        this.margemLucroPercentual = 0.0;
+        this.observacoes = "";
+    }
+
+    // Calcula total do pedido
+    public void calcularValorTotal() {
+        valorTotal = 0.0;
+
+        if (itens != null) {
+        for (ItemPedido item : itens) {
+        valorTotal += item.calcularSubtotal();
+            }
+        }
+    }
+
+    // Atualiza status do pedido
+    public void atualizarStatus(String novoStatus) {
+        if (novoStatus != null && !novoStatus.trim().isEmpty()) {
+        this.statusPedido = novoStatus;
+        }
+    }
+
+    // Adiciona item ao pedido
+    public void adicionarItem(ItemPedido item) {
+        if (item != null) {
+        itens.add(item);
+        calcularValorTotal();
+        }
+    }
+
+    // Getters e Setters
+    public int getIdPedido() {
+        return idPedido;
+    }
+    public void setIdPedido(int idPedido) {
+        this.idPedido = idPedido;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
+    public void setItens(List<ItemPedido> itens) {
+        this.itens = itens;
+        calcularValorTotal();
+    }
+    public double getValorTotal() {
+        return valorTotal;
+    }
+    public String getStatusPedido() {
+        return statusPedido;
+    }
+    public void setStatusPedido(String statusPedido) {
+        this.statusPedido = statusPedido;
+    }
+    public double getMargemLucroPercentual() {
+        return margemLucroPercentual;
+    }
+    public void setMargemLucroPercentual(double margemLucroPercentual) {
+        this.margemLucroPercentual = margemLucroPercentual;
+    }
+    public String getObservacoes() {
+        return observacoes;
+    }
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
 }
