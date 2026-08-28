@@ -20,14 +20,6 @@ public class Produto {
     private double custoUnitario;
     private int estoqueAtual;
     private String ncm;
-}
-    private int idProduto;
-    private String codigoSku;
-    private String descricao;
-    private double precoTabela;
-    private double custoUnitario;
-    private int estoqueAtual;
-    private String ncm;
 
     public Produto() {
     }
