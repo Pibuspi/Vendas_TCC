@@ -18,7 +18,7 @@ public class ItemPedido {
     private double precoPraticado;
     private double descontoAplicado;
     private double subtotal;
-}
+
 
     // Construtor 
     public ItemPedido(int idItem, Produto produto, int quantidade, 
