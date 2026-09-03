@@ -1,20 +1,30 @@
 package controller;
 
-import model.PedidoVenda;
+import model.RegraPreco;
+import model.ResultadoPrecificacao;
 
-/**
- * Controller: PricingEngineController.java
- * Responsável: Matheus
- * -----------------------------------------------------------------------------
- * Descrição detalhada: Implementa o motor de preços (Pricing Engine). Valida se a
- * margem de lucro do pedido está acima do mínimo exigido, acionando alçadas
- * comerciais ou Hard Stops caso contrário.
- * 
- * O que fazer em Controller (Matheus):
- * - Algoritmo de cálculo de margem (Custo vs Preço Praticado).
- * - Lógica de bloqueio automático por alçada comercial.
- */
 public class PricingEngineController {
-    public boolean validarMargemLucro(PedidoVenda pedido) { return true; }
-    public void aplicarAlcadaComercial(PedidoVenda pedido) {}
+
+    public ResultadoPrecificacao validarMargemLucro(RegraPreco regra, double precoPraticado, double descontoAplicado) {
+        if (precoPraticado <= 0) {
+            return new ResultadoPrecificacao(0.0, "BLOQ", "Preço de venda inválido.");
+        }
+
+        // Cálculo da margem real
+        double margemReal = ((precoPraticado - regra.getCusto()) / precoPraticado) * 100;
+
+        // Validação de margem abaixo do mínimo ou negativa
+        if (margemReal < regra.getMargemMinima() || precoPraticado < regra.getPrecoMinimo()) {
+            return new ResultadoPrecificacao(margemReal, "HARD_STOP", "HARD STOP: Margem ou preço abaixo do mínimo permitido.");
+        }
+
+        // Regras de Alçada por faixa de desconto[cite: 1]
+        if (descontoAplicado <= 5.0) {
+            return new ResultadoPrecificacao(margemReal, "LIBERADO", "Desconto dentro da faixa permitida. Liberação automática[cite: 1].");
+        } else if (descontoAplicado > 5.0 && descontoAplicado <= 10.0) {
+            return new ResultadoPrecificacao(margemReal, "PENDENTE", "Desconto entre 5% e 10%. Necessária aprovação do Gerente[cite: 1].");
+        } else {
+            return new ResultadoPrecificacao(margemReal, "HARD_STOP", "HARD STOP: Desconto acima de 10% exige supervisor[cite: 1].");
+        }
+    }
 }
